@@ -1,0 +1,22 @@
+{
+  "name": "project-request-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErnestWangZuNian/project-request-api.git"
+  },
+  "keywords": [
+    "'封装ajax请求'"
+  ],
+  "author": "'Ernest wang'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErnestWangZuNian/project-request-api/issues"
+  },
+  "homepage": "https://github.com/ErnestWangZuNian/project-request-api#readme"
+}
