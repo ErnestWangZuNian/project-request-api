@@ -25,10 +25,8 @@ axios.interceptors.response.use(
 );
 
 //  导出api
-class Api extends axios {
-  constructor() {
-    super();
-  }
+class Api {
+  constructor() {}
   post(url, data) {
     return axios({
       method: "post",
