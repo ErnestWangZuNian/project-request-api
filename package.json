@@ -1,21 +1,17 @@
 {
-  "name": "project-request-api",
-  "version": "1.0.0",
+  "name": "wzn-api",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --open --config webpack.common.js",
-    "test": "node node_modules/mocha/bin/mocha --watch --require babel-core/register",
-    "reporter": "node node_modules/mocha/bin/mocha --require babel-core/register --reporter mochawesome"
+    "start": "webpack-dev-server --open --config webpack.common.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ErnestWangZuNian/project-request-api.git"
   },
-  "keywords": [
-    "封装ajax请求"
-  ],
+  "keywords": ["封装ajax请求"],
   "author": "'Ernest wang'",
   "license": "ISC",
   "bugs": {

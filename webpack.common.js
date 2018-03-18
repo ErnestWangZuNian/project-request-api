@@ -4,10 +4,10 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "common-utils.js",
+    filename: "wzn-request-api.js",
     libraryTarget: "umd",
     libraryExport: "default",
-    library: "commonutils"
+    library: "wznRequestApi"
   },
   module: {
     rules: [{ test: /\.js$/, loader: "babel-loader" }]
