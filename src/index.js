@@ -1,32 +1,19 @@
 import axios from "axios";
 import qs from "qs";
-const baseURL = "";
-axios.defaults.baseURL = baseURL;
-
-// 添加请求拦截器
-axios.interceptors.request.use(
-  config => {
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
-  }
-);
-
-// 添加响应拦截器
-axios.interceptors.response.use(
-  response => {
-    return response;
-  },
-  error => {
-    // 对响应错误做点什么
-    return Promise.reject(error);
-  }
-);
-
 //  导出api
 class Api {
-  constructor() {}
+  constructor(config) {
+    axios.create(config);
+  }
+  // get请求
+  get(url, params) {
+    return axios({
+      method: "get",
+      url,
+      params
+    });
+  }
+  //  post请求
   post(url, data) {
     return axios({
       method: "post",
@@ -34,12 +21,17 @@ class Api {
       data: qs.stringify(data)
     });
   }
-  get(url, params) {
-    return axios({
-      method: "get",
-      url,
-      params
-    });
+  // 多个请求并发
+  all(requests) {
+    if (requests instanceof Array) {
+      return axios.all(requests);
+    } else {
+      console.error("并发请求不是一个数组");
+    }
+  }
+  // 创建一个实例
+  create(config) {
+    return axios.create(config);
   }
 }
 export default Api;
