@@ -31,13 +31,13 @@
 
 ## 使用方式
 
-```
- import Api from "wzn-api"
- // 实例化api
- let api = new Api();
- // 创建实例自己的拦截器
- let instance = api.create();
- // 添加请求拦截器
+```js
+import Api from "wzn-api";
+// 实例化api
+let api = new Api();
+// 创建实例自己的拦截器
+let instance = api.create();
+// 添加请求拦截器
 instance.interceptors.request.use(
   config => {
     return config;
@@ -57,18 +57,18 @@ instance.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-api.get(url,data).then(data => {
-    console.log(data)
-})
-api.post(url,data).then(data => {
-    console.log(data)
-})
-api.all([api.get(url.data),api.get(url1.data1)]).then(datas => {
-    console.log(datas)
-})
+api.get(url, data).then(data => {
+  console.log(data);
+});
+api.post(url, data).then(data => {
+  console.log(data);
+});
+api.all([api.get(url.data), api.get(url1.data1)]).then(datas => {
+  console.log(datas);
+});
 ```
 
 ## 参考地址
 
-> axios 中文文档 https://www.kancloud.cn/yunye/axios/234845
-> 另一个项目 react 基础环境搭建里面有 api 的使用方式 https://github.com/ErnestWangZuNian/react-in-project.git
+axios 中文文档 https://www.kancloud.cn/yunye/axios/234845 </br>
+另一个项目 react 基础环境搭建里面有 api 的使用方式 https://github.com/ErnestWangZuNian/react-in-project.git
