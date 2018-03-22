@@ -4,6 +4,7 @@ import qs from "qs";
 class Api {
   constructor(config) {
     axios.create(config);
+    this.interceptors = axios.interceptors;
   }
   // get请求
   get(url, params) {
