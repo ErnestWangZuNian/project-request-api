@@ -5,7 +5,8 @@
   "main": "dist/wzn-request-api.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --open --config webpack.dev.js"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "release": "npm version patch && npm run build && npm publish --access=public"
   },
   "repository": {
     "type": "git",
@@ -29,9 +30,12 @@
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "html-webpack-plugin": "^3.0.6",
-    "webpack": "^3.10.0",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1",
     "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0"
   }
 }

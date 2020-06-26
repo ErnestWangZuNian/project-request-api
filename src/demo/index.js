@@ -55,6 +55,7 @@ api.all([api
   )
   .then((data) => {
     console.log(data, "www");
+    api.Cancel();
   }), api
   .post(
     "/api/article",

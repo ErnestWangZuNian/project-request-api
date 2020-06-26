@@ -8,10 +8,10 @@ class Api extends Axios {
       message: true,
       ...config,
     });
-  }
-  // 并发请求
-  all(promise) {
-    axios.all(promise);
+    this.spread = axios.spread;
+    this.Cancel = axios.Cancel;
+    this.CancelToken = axios.CancelToken;
+    this.isCancel = axios.isCancel;
   }
 
   // get请求
@@ -20,6 +20,11 @@ class Api extends Axios {
       params,
       ...config,
     });
+  }
+
+  // 并发请求
+  all(promise) {
+    axios.all(promise);
   }
 }
 export default Api;
