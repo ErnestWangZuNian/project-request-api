@@ -17,6 +17,9 @@ module.exports = merge(common, {
     libraryExport: "default",
     library: "wznRequestApi",
   },
+  externals: {
+    axios: 'axios',
+  },
   plugins: [
     new CleanWebpackPlugin("dist"),
     new UglifyESPlugin(),

@@ -43,20 +43,13 @@ api.interceptors.response.use(
     return result;
   }
 );
-api.all([api
-  .get(
-    "/api/article",
-    {
-      id: 1,
-    },
-    {
-      message: false,
-    }
-  )
-  .then((data) => {
-    console.log(data, "www");
-    api.Cancel();
-  }), api
+api.all([api.request({
+  method: 'get',
+  url: "/api/article",
+  params: {
+    id: 1
+  }
+}), api
   .post(
     "/api/article",
     {
