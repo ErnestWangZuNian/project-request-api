@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ErnestWangZuNian/project-request-api#readme",
   "devDependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
